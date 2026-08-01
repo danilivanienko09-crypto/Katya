@@ -6,64 +6,67 @@ const nextPage = document.getElementById("nextPage");
 const typing = document.getElementById("typing");
 
 const text = `
-Я хочу, чтобы ты знала:
-ты стала для меня очень важным человеком.
+Я хочу, чтобы ты знала одну вещь.
 
-Спасибо за каждый момент рядом,
-за твою улыбку и за то тепло,
-которое ты мне даришь.
+Ты стала для меня очень родным и важным человеком.
+
+Я счастлив, что именно ты появилась в моей жизни.
+
+Мне дороги наши встречи и моменты, которые мы проводим вместе.
+
+Спасибо тебе за твою улыбку, тепло и заботу.
 
 Я очень ценю тебя ❤️
 `;
 
 let index = 0;
 
-function typeText(){
-    if(index < text.length){
+function typeText() {
+
+    if (index < text.length) {
+
         typing.innerHTML += text[index];
+
         index++;
-        setTimeout(typeText, 50);
+
+        setTimeout(typeText, 45);
+
     }
+
 }
 
 openButton.addEventListener("click", () => {
 
     story.classList.remove("hidden");
 
+    story.scrollIntoView({
+        behavior: "smooth"
+    });
+
     setTimeout(() => {
-        story.scrollIntoView({
-            behavior: "smooth"
-        });
 
         typeText();
 
-    },300);
+    }, 500);
+
+    setTimeout(() => {
+
+        reasons.classList.remove("hidden");
+
+    }, 9000);
 
 });
 
 nextPage.addEventListener("click", () => {
 
-    reasons.classList.remove("hidden");
+    finalPage.classList.remove("hidden");
 
-    setTimeout(() => {
-
-        reasons.scrollIntoView({
-            behavior:"smooth"
-        });
-
-    },300);
+    finalPage.scrollIntoView({
+        behavior: "smooth"
+    });
 
 });
 
-window.addEventListener("scroll", () => {
-
-    if(window.scrollY > 1200){
-
-        finalPage.classList.remove("hidden");
-
-    }
-
-});
 
 
 
