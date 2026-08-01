@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at top,#222 0%,#111 35%,#000 80%);
+    z-index:-2;
+}
+
+.background::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url("photo.jpg") center center/cover no-repeat;
+    opacity:.23;
+    filter:blur(10px);
+    transform:scale(1.08);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+.glass{
+
+    width:min(900px,92vw);
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:34px;
+
+    padding:70px 45px;
+
+    text-align:center;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.mini{
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#9d9d9d;
+
+    font-size:13px;
+
+}
+
+h1{
+
+    font-size:72px;
+
+    margin:18px 0;
+
+    font-weight:700;
+
+}
+
+.text{
+
+    color:#d0d0d0;
+
+    line-height:1.8;
+
+    font-size:22px;
+
+    max-width:650px;
+
+    margin:0 auto;
+
+}
+
+button{
+
+    margin-top:45px;
+
+    border:none;
+
+    background:#fff;
+
+    color:#000;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    border-radius:999px;
+
+    padding:18px 42px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+#story{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:30px;
+
+}
+
+.content{
+
+    width:min(900px,92vw);
+
+}
+
+.content h2{
+
+    font-size:58px;
+
+    margin-bottom:35px;
+
+}
+
+#typing{
+
+    font-size:24px;
+
+    color:#d4d4d4;
+
+    line-height:2;
+
+}
+
+max-width:768px{
+
+h1{
+
+font-size:48px;
+
+}
+
+.content h2{
+
+font-size:38px;
+
+}
+
+.text,#typing{
+
+font-size:19px;
+
+}
+
+.glass{
+
+padding:45px 28px;
+
+}
+
+}
