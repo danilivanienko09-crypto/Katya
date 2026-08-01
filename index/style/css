@@ -199,3 +199,59 @@ padding:45px 28px;
 }
 
 }
+.page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 25px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+    margin:50px 0;
+}
+
+.card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:28px;
+    padding:30px;
+    transition:.35s;
+    backdrop-filter:blur(20px);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card span{
+    font-size:34px;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card p{
+    color:#cfcfcf;
+    line-height:1.7;
+}
+
+.final{
+    text-align:center;
+}
+
+.final h1{
+    margin-bottom:35px;
+}
+
+.final p{
+    font-size:24px;
+    line-height:2;
+    color:#ddd;
+}
+
+
