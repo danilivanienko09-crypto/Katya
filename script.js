@@ -12,30 +12,29 @@ const text = `
 
 Я счастлив, что именно ты появилась в моей жизни.
 
-Мне дороги наши встречи и моменты, которые мы проводим вместе.
-
-Спасибо тебе за твою улыбку, тепло и заботу.
+Спасибо тебе за твою улыбку,
+тепло и моменты рядом.
 
 Я очень ценю тебя ❤️
 `;
 
-let index = 0;
+let i = 0;
 
 function typeText() {
 
-    if (index < text.length) {
+    if (i < text.length) {
 
-        typing.innerHTML += text[index];
+        typing.textContent += text[i];
 
-        index++;
+        i++;
 
-        setTimeout(typeText, 45);
+        setTimeout(typeText, 50);
 
     }
 
 }
 
-openButton.addEventListener("click", () => {
+openButton.addEventListener("click", function(){
 
     story.classList.remove("hidden");
 
@@ -44,29 +43,17 @@ openButton.addEventListener("click", () => {
     });
 
     setTimeout(() => {
-
         typeText();
-
-    }, 500);
-
-    setTimeout(() => {
-
-        reasons.classList.remove("hidden");
-
-    }, 9000);
+    },500);
 
 });
 
-nextPage.addEventListener("click", () => {
+nextPage.addEventListener("click", function(){
 
     finalPage.classList.remove("hidden");
 
     finalPage.scrollIntoView({
-        behavior: "smooth"
+        behavior:"smooth"
     });
 
 });
-
-
-
-
