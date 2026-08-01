@@ -1,0 +1,52 @@
+const openButton = document.getElementById("openButton");
+const story = document.getElementById("story");
+const hero = document.querySelector(".hero");
+const typing = document.getElementById("typing");
+
+const text = `Сегодня особенный день.
+
+Я очень долго думал, чем тебя удивить.
+
+И понял, что самые важные вещи невозможно купить.
+
+Поэтому я решил подарить тебе маленькое место, которое существует только для тебя.
+
+Спасибо тебе за каждую улыбку.
+
+Спасибо за заботу.
+
+Спасибо за то, что именно ты делаешь мою жизнь счастливее.
+
+Я очень сильно тебя люблю. ❤️`;
+
+openButton.addEventListener("click", () => {
+
+    hero.style.transition = "opacity .8s";
+    hero.style.opacity = "0";
+
+    setTimeout(() => {
+
+        hero.style.display = "none";
+        story.classList.remove("hidden");
+
+        let i = 0;
+
+        function type() {
+
+            if (i < text.length) {
+
+                typing.innerHTML += text.charAt(i);
+
+                i++;
+
+                setTimeout(type, 35);
+
+            }
+
+        }
+
+        type();
+
+    }, 800);
+
+});
