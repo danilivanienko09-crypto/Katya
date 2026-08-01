@@ -50,3 +50,32 @@ openButton.addEventListener("click", () => {
     }, 800);
 
 });
+const reasons = document.getElementById("reasons");
+const finalPage = document.getElementById("finalPage");
+const nextPage = document.getElementById("nextPage");
+
+function showReasons(){
+
+    story.style.display="none";
+
+    reasons.classList.remove("hidden");
+
+}
+
+setTimeout(()=>{
+
+    if(!story.classList.contains("hidden")){
+
+        setTimeout(showReasons,17000);
+
+    }
+
+},1000);
+
+nextPage.addEventListener("click",()=>{
+
+    reasons.style.display="none";
+
+    finalPage.classList.remove("hidden");
+
+});
