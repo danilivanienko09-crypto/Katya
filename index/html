@@ -56,7 +56,78 @@
     </div>
 
 </section>
+<section class="page hidden" id="reasons">
 
+    <div class="content">
+
+        <p class="mini">Почему именно ты?</p>
+
+        <h2>Ты — мой самый любимый человек.</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <span>❤️</span>
+                <h3>Твоя улыбка</h3>
+                <p>Она делает счастливым даже самый обычный день.</p>
+            </div>
+
+            <div class="card">
+                <span>🫂</span>
+                <h3>Рядом с тобой</h3>
+                <p>Я чувствую спокойствие и тепло.</p>
+            </div>
+
+            <div class="card">
+                <span>✨</span>
+                <h3>Спасибо</h3>
+                <p>За то, что появилась в моей жизни.</p>
+            </div>
+
+        </div>
+
+        <button id="nextPage">
+            Дальше ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<section class="page hidden" id="finalPage">
+
+    <div class="content final">
+
+        <h1>С Днем рождения, любимая ❤️</h1>
+
+        <p>
+
+        Спасибо тебе за каждый день рядом.
+
+        Спасибо за твою любовь.
+
+        Спасибо за твою улыбку.
+
+        
+
+      Я очень тебя люблю.
+
+        И хочу, чтобы ты всегда была счастлива.
+
+        
+
+      ❤️
+
+        
+<
+
+     Твой Даня
+
+        </p>
+
+    </div>
+
+</section>
 <script src="script.js"></script>
 
 </body>
