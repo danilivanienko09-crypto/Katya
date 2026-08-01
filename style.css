@@ -15,17 +15,43 @@ body {
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(circle at top, rgba(255,120,170,0.4), transparent 40%),
-        radial-gradient(circle at bottom, rgba(120,90,255,0.3), transparent 40%),
+        radial-gradient(circle at top, #ff9fcf, transparent 35%),
+        radial-gradient(circle at bottom, #7b61ff, transparent 35%),
         #000;
-
     z-index: -1;
 }
 
-.hero,
+/* Первый экран */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.glass,
+.content {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Остальные страницы */
+
 .page,
 #story {
-
     min-height: 100vh;
 
     display: flex;
@@ -35,68 +61,33 @@ body {
     align-items: center;
 
     padding: 25px;
-
-}
-
-.glass,
-.content {
-
-    width: 100%;
-
-    max-width: 750px;
-
-    padding: 45px 30px;
-
-    text-align: center;
-
-    background: rgba(255,255,255,0.1);
-
-    border-radius: 35px;
-
-    backdrop-filter: blur(20px);
-
-    border: 1px solid rgba(255,255,255,0.15);
-
 }
 
 .mini {
-
     opacity: 0.7;
-
     font-size: 16px;
-
 }
 
 h1 {
-
-    font-size: 65px;
-
+    font-size: 60px;
     margin: 25px 0;
-
 }
 
 h2 {
-
     font-size: 38px;
-
     margin-bottom: 25px;
-
 }
 
-.text,
 p {
-
-    font-size: 19px;
-
-    line-height: 1.7;
-
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 button {
 
     margin-top: 30px;
 
-    padding: 16px 40px;
+    padding: 15px 40px;
 
     border-radius: 50px;
 
@@ -128,7 +119,7 @@ button {
 
     border-radius: 25px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.1);
 
 }
 
@@ -138,10 +129,10 @@ button {
 
 }
 
+/* Скрытие блоков */
+
 .hidden {
-
     display: none;
-
 }
 
 .final h1 {
@@ -164,12 +155,6 @@ max-width:600px{
     .content {
 
         padding: 30px 20px;
-
-    }
-
-    p {
-
-        font-size: 17px;
 
     }
 
