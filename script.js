@@ -1,8 +1,8 @@
 const openButton = document.getElementById("openButton");
 const story = document.getElementById("story");
 const reasons = document.getElementById("reasons");
-const finalPage = document.getElementById("finalPage");
 const nextPage = document.getElementById("nextPage");
+const finalPage = document.getElementById("finalPage");
 const typing = document.getElementById("typing");
 
 const text = `
@@ -24,7 +24,7 @@ function typeText() {
 
     if (i < text.length) {
 
-        typing.textContent += text[i];
+        typing.innerHTML += text[i];
 
         i++;
 
@@ -34,7 +34,7 @@ function typeText() {
 
 }
 
-openButton.addEventListener("click", function(){
+openButton.addEventListener("click", () => {
 
     story.classList.remove("hidden");
 
@@ -44,16 +44,25 @@ openButton.addEventListener("click", function(){
 
     setTimeout(() => {
         typeText();
-    },500);
+    }, 500);
+
+    setTimeout(() => {
+
+        reasons.classList.remove("hidden");
+
+    }, 7000);
 
 });
 
-nextPage.addEventListener("click", function(){
+nextPage.addEventListener("click", () => {
 
     finalPage.classList.remove("hidden");
 
     finalPage.scrollIntoView({
-        behavior:"smooth"
+        behavior: "smooth"
     });
 
 });
+
+
+
