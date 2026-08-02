@@ -1,9 +1,14 @@
 const openButton = document.getElementById("openButton");
+
 const story = document.getElementById("story");
 const reasons = document.getElementById("reasons");
+const photoPage = document.getElementById("photoPage");
+const finalPage = document.getElementById("finalPage");
+
 const showReasons = document.getElementById("showReasons");
 const nextPage = document.getElementById("nextPage");
-const finalPage = document.getElementById("finalPage");
+const finalButton = document.getElementById("finalButton");
+
 const typing = document.getElementById("typing");
 
 const message = `
@@ -13,7 +18,7 @@ const message = `
 
 Мне дороги наши моменты и время, которое мы проводим вместе.
 
-Спасибо тебе за твою улыбку, тепло и заботу ❤️
+Спасибо тебе за твою улыбку, тепло и заботу❤️
 `;
 
 let i = 0;
@@ -56,6 +61,16 @@ showReasons.onclick = function() {
 
 nextPage.onclick = function() {
 
+    photoPage.classList.remove("hidden");
+
+    photoPage.scrollIntoView({
+        behavior: "smooth"
+    });
+
+};
+
+finalButton.onclick = function() {
+
     finalPage.classList.remove("hidden");
 
     finalPage.scrollIntoView({
@@ -63,7 +78,3 @@ nextPage.onclick = function() {
     });
 
 };
-
-
-
-
