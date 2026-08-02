@@ -112,7 +112,3 @@ function updateTimer() {
 updateTimer();
 
 setInterval(updateTimer, 1000);
-
-
-
-
