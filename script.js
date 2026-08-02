@@ -18,7 +18,7 @@ const message = `
 
 Мне дороги наши моменты и время, которое мы проводим вместе.
 
-Спасибо тебе за твою улыбку, тепло и заботу❤️
+Спасибо тебе за твою улыбку, тепло и заботу ❤️
 `;
 
 let index = 0;
@@ -37,7 +37,7 @@ function printText() {
 
 }
 
-openButton.onclick = () => {
+openButton.onclick = function() {
 
     story.classList.remove("hidden");
 
@@ -49,7 +49,7 @@ openButton.onclick = () => {
 
 };
 
-showReasons.onclick = () => {
+showReasons.onclick = function() {
 
     reasons.classList.remove("hidden");
 
@@ -59,7 +59,7 @@ showReasons.onclick = () => {
 
 };
 
-nextPage.onclick = () => {
+nextPage.onclick = function() {
 
     photoPage.classList.remove("hidden");
 
@@ -69,7 +69,7 @@ nextPage.onclick = () => {
 
 };
 
-finalButton.onclick = () => {
+finalButton.onclick = function() {
 
     finalPage.classList.remove("hidden");
 
@@ -78,6 +78,40 @@ finalButton.onclick = () => {
     });
 
 };
+
+// Таймер отношений
+
+function updateTimer() {
+
+    const startDate = new Date("2026-07-14T00:00:00");
+
+    const now = new Date();
+
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(diff / (1000 * 60 * 60) % 24);
+
+    const minutes = Math.floor(diff / (1000 * 60) % 60);
+
+    const seconds = Math.floor(diff / 1000 % 60);
+
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
+
+    if (daysElement) daysElement.textContent = days;
+    if (hoursElement) hoursElement.textContent = hours;
+    if (minutesElement) minutesElement.textContent = minutes;
+    if (secondsElement) secondsElement.textContent = seconds;
+
+}
+
+updateTimer();
+
+setInterval(updateTimer, 1000);
 
 
 
