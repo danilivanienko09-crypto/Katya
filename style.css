@@ -5,35 +5,30 @@
 }
 
 body {
-    font-family: Inter, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: white;
     background: #000;
-    overflow-x: hidden;
 }
 
 .background {
     position: fixed;
     inset: 0;
+    background: linear-gradient(135deg, #1a1a1a, #3b1f35, #000);
     z-index: -1;
-
-    background:
-        linear-gradient(
-            135deg,
-            #111,
-            #2b1b2b,
-            #000
-        );
 }
 
 .hero,
 .page,
 #story {
+
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 25px;
+    padding: 20px;
+
 }
 
 .glass,
@@ -46,16 +41,11 @@ body {
 
     text-align: center;
 
-    background: rgba(255,255,255,0.1);
-
-    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.12);
 
     border-radius: 30px;
 
     backdrop-filter: blur(20px);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.4);
 
 }
 
@@ -68,7 +58,7 @@ body {
 
 h1 {
 
-    font-size: 42px;
+    font-size: 40px;
     margin: 20px 0;
 
 }
@@ -82,7 +72,7 @@ h2 {
 
 p {
 
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.6;
 
 }
@@ -93,9 +83,9 @@ button {
 
     padding: 15px 35px;
 
-    border-radius: 50px;
-
     border: none;
+
+    border-radius: 50px;
 
     background: white;
 
@@ -104,12 +94,6 @@ button {
     font-size: 17px;
 
     cursor: pointer;
-
-}
-
-button:active {
-
-    transform: scale(0.95);
 
 }
 
@@ -145,13 +129,11 @@ button:active {
 
     background: rgba(255,255,255,0.12);
 
-    backdrop-filter: blur(15px);
-
 }
 
 .card span {
 
-    font-size: 40px;
+    font-size: 35px;
 
 }
 
@@ -159,13 +141,21 @@ button:active {
 
     margin: 15px 0;
 
-    font-size: 22px;
+}
+
+/* ФОТО */
+
+#photoPage .content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 
 }
 
 .love-photo {
-
-    display: block;
 
     width: 250px;
 
@@ -173,11 +163,19 @@ button:active {
 
     height: auto;
 
-    margin: 30px auto;
+    display: block;
+
+    margin: 25px auto;
 
     border-radius: 25px;
 
-    object-fit: cover;
+}
+
+#photoPage button {
+
+    display: block;
+
+    margin: 20px auto 0;
 
 }
 
@@ -187,31 +185,18 @@ button:active {
 
 }
 
-max-width: 600px {
+max-width:600px {
 
     h1 {
-
         font-size: 34px;
-
     }
 
     h2 {
-
         font-size: 25px;
-
-    }
-
-    .glass,
-    .content {
-
-        padding: 25px 18px;
-
     }
 
     p {
-
         font-size: 16px;
-
     }
 
 }
