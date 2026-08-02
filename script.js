@@ -1,8 +1,9 @@
 const openButton = document.getElementById("openButton");
 const story = document.getElementById("story");
 const reasons = document.getElementById("reasons");
-const nextPage = document.getElementById("nextPage");
+const showReasons = document.getElementById("showReasons");
 const finalPage = document.getElementById("finalPage");
+const nextPage = document.getElementById("nextPage");
 const typing = document.getElementById("typing");
 
 const text = `
@@ -12,21 +13,23 @@ const text = `
 
 Я счастлив, что именно ты появилась в моей жизни.
 
-Спасибо тебе за твою улыбку,
-тепло и моменты рядом.
+Мне дороги наши моменты вместе.
 
-Я очень ценю тебя ❤️
+Спасибо тебе за твою улыбку,
+тепло и заботу.
+
+Я очень тебя люблю ❤️
 `;
 
-let i = 0;
+let index = 0;
 
 function typeText() {
 
-    if (i < text.length) {
+    if (index < text.length) {
 
-        typing.innerHTML += text[i];
+        typing.innerHTML += text[index];
 
-        i++;
+        index++;
 
         setTimeout(typeText, 50);
 
@@ -43,14 +46,20 @@ openButton.addEventListener("click", () => {
     });
 
     setTimeout(() => {
+
         typeText();
+
     }, 500);
 
-    setTimeout(() => {
+});
 
-        reasons.classList.remove("hidden");
+showReasons.addEventListener("click", () => {
 
-    }, 7000);
+    reasons.classList.remove("hidden");
+
+    reasons.scrollIntoView({
+        behavior: "smooth"
+    });
 
 });
 
@@ -63,6 +72,7 @@ nextPage.addEventListener("click", () => {
     });
 
 });
+
 
 
 
