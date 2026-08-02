@@ -13,14 +13,13 @@ body {
 .background {
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, #1a1a1a, #3b1f35, #000);
+    background: linear-gradient(135deg, #111, #3b1f35, #000);
     z-index: -1;
 }
 
 .hero,
 .page,
 #story {
-
     min-height: 100vh;
 
     display: flex;
@@ -28,7 +27,6 @@ body {
     align-items: center;
 
     padding: 20px;
-
 }
 
 .glass,
@@ -50,31 +48,23 @@ body {
 }
 
 .mini {
-
     font-size: 15px;
     opacity: 0.8;
-
 }
 
 h1 {
-
     font-size: 40px;
     margin: 20px 0;
-
 }
 
 h2 {
-
     font-size: 30px;
     margin-bottom: 25px;
-
 }
 
 p {
-
     font-size: 18px;
     line-height: 1.6;
-
 }
 
 button {
@@ -97,22 +87,21 @@ button {
 
 }
 
+button:hover {
+    transform: scale(1.05);
+}
+
 .hidden {
-
     display: none;
-
 }
 
 .dates {
-
     margin-top: 30px;
-
 }
 
 .cards {
 
     display: flex;
-
     flex-direction: column;
 
     gap: 20px;
@@ -132,18 +121,14 @@ button {
 }
 
 .card span {
-
     font-size: 35px;
-
 }
 
 .card h3 {
-
     margin: 15px 0;
-
 }
 
-/* ФОТО */
+/* Фото */
 
 #photoPage .content {
 
@@ -169,13 +154,15 @@ button {
 
     border-radius: 25px;
 
+    object-fit: cover;
+
 }
 
 #photoPage button {
 
     display: block;
 
-    margin: 20px auto 0;
+    margin: 25px auto 0;
 
 }
 
@@ -185,7 +172,7 @@ button {
 
 }
 
-max-width:600px {
+max-width: 600px {
 
     h1 {
         font-size: 34px;
@@ -199,8 +186,9 @@ max-width:600px {
         font-size: 16px;
     }
 
+    .glass,
+    .content {
+        padding: 25px 18px;
+    }
+
 }
-
-
-
-
