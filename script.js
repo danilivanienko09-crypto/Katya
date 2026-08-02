@@ -2,42 +2,37 @@ const openButton = document.getElementById("openButton");
 const story = document.getElementById("story");
 const reasons = document.getElementById("reasons");
 const showReasons = document.getElementById("showReasons");
-const finalPage = document.getElementById("finalPage");
 const nextPage = document.getElementById("nextPage");
+const finalPage = document.getElementById("finalPage");
 const typing = document.getElementById("typing");
 
-const text = `
-Я хочу, чтобы ты знала одну вещь.
+const message = `
+Я хочу, чтобы ты знала, насколько ты для меня важна.
 
-Ты стала для меня очень родным и важным человеком.
+Ты стала очень родным человеком для меня.
 
-Я счастлив, что именно ты появилась в моей жизни.
+Мне дороги наши моменты и время, которое мы проводим вместе.
 
-Мне дороги наши моменты вместе.
-
-Спасибо тебе за твою улыбку,
-тепло и заботу.
-
-Я очень тебя люблю ❤️
+Спасибо тебе за твою улыбку, тепло и заботу ❤️
 `;
 
-let index = 0;
+let i = 0;
 
-function typeText() {
+function printText() {
 
-    if (index < text.length) {
+    if (i < message.length) {
 
-        typing.innerHTML += text[index];
+        typing.innerHTML += message[i];
 
-        index++;
+        i++;
 
-        setTimeout(typeText, 50);
+        setTimeout(printText, 40);
 
     }
 
 }
 
-openButton.addEventListener("click", () => {
+openButton.onclick = function() {
 
     story.classList.remove("hidden");
 
@@ -45,15 +40,11 @@ openButton.addEventListener("click", () => {
         behavior: "smooth"
     });
 
-    setTimeout(() => {
+    setTimeout(printText, 500);
 
-        typeText();
+};
 
-    }, 500);
-
-});
-
-showReasons.addEventListener("click", () => {
+showReasons.onclick = function() {
 
     reasons.classList.remove("hidden");
 
@@ -61,9 +52,9 @@ showReasons.addEventListener("click", () => {
         behavior: "smooth"
     });
 
-});
+};
 
-nextPage.addEventListener("click", () => {
+nextPage.onclick = function() {
 
     finalPage.classList.remove("hidden");
 
@@ -71,7 +62,7 @@ nextPage.addEventListener("click", () => {
         behavior: "smooth"
     });
 
-});
+};
 
 
 
