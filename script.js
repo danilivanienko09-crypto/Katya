@@ -21,15 +21,15 @@ const message = `
 Спасибо тебе за твою улыбку, тепло и заботу❤️
 `;
 
-let i = 0;
+let index = 0;
 
 function printText() {
 
-    if (i < message.length) {
+    if (index < message.length) {
 
-        typing.innerHTML += message[i];
+        typing.innerHTML += message[index];
 
-        i++;
+        index++;
 
         setTimeout(printText, 40);
 
@@ -37,7 +37,7 @@ function printText() {
 
 }
 
-openButton.onclick = function() {
+openButton.onclick = () => {
 
     story.classList.remove("hidden");
 
@@ -49,7 +49,7 @@ openButton.onclick = function() {
 
 };
 
-showReasons.onclick = function() {
+showReasons.onclick = () => {
 
     reasons.classList.remove("hidden");
 
@@ -59,7 +59,7 @@ showReasons.onclick = function() {
 
 };
 
-nextPage.onclick = function() {
+nextPage.onclick = () => {
 
     photoPage.classList.remove("hidden");
 
@@ -69,7 +69,7 @@ nextPage.onclick = function() {
 
 };
 
-finalButton.onclick = function() {
+finalButton.onclick = () => {
 
     finalPage.classList.remove("hidden");
 
@@ -78,3 +78,7 @@ finalButton.onclick = function() {
     });
 
 };
+
+
+
+
